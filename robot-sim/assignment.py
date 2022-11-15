@@ -49,24 +49,6 @@ def turn(speed, seconds):
     R.motors[0].m0.power = 0
     R.motors[0].m1.power = 0
 
-def find_token():
-    """
-    Function to find the closest token
-
-    Returns:
-	dist (float): distance of the closest token (-1 if no token is detected)
-	rot_y (float): angle between the robot and the token (-1 if no token is detected)
-    """
-    dist=100
-    for token in R.see():
-        if token.dist < dist:
-            dist=token.dist
-	    rot_y=token.rot_y
-    if dist==100:
-	return -1, -1
-    else:
-   	return dist, rot_y
-
 #My functions
 
 def find_silver():
@@ -115,20 +97,20 @@ def find_gold():
 		print(gold)
 		return(gold)
 
-def update(lista):
+def update(list_token):
 	"""
 	Function to sort the tokens with respect to the closest one whithout other tokens in between
 	"""
 	#sort the list
-	print(lista)
-	lista= sorted(lista, key=lambda x: x[1])
+	print(list_token)
+	lt= sorted(list_token, key=lambda x: x[1])
     	#check there are no tokens on my path
-    	c=lista[0][0]
-        d=lista[0][1]
-        r=lista[0][2]
+    	c=lt[0][0]
+        d=lt[0][1]
+        r=lt[0][2]
         return(c,d,r)
     		
-def raggiungi_token_vicino(r,d,lista):
+def reach_closest_token(r,d):
 	"""
 	Function to reach the nearest token
 	"""
@@ -193,7 +175,7 @@ while len(silver_taken)<6:
     	print("searching the silver:",c)
     	silver=find_silver()
     	(c,d,r)=update(silver)
-    	raggiungi_token_vicino(r,d,silver)
+    	reach_closest_token(r,d)
     	silver_action(c)
     print("Now i search gold token")
     gold=find_gold()
@@ -204,7 +186,7 @@ while len(silver_taken)<6:
     	print("searching the gold:",c)
     	gold=find_gold()
     	(c,d,r)=update(gold)
-    	raggiungi_token_vicino(r,d,gold)
+    	reach_closest_token(r,d)
     	gold_action(c,d,r)   
     print("Taken silver token:",silver_taken)
     print("Taken gold token:",gold_taken)
