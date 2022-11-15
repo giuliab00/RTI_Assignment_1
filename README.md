@@ -9,7 +9,7 @@ To run it:
 ```bash
 $ python2 run.py assignment.py
 ```
-How works
+How it works
 ----------------------
 From its initial position the Robot start searching the closest silver token, it measures and saves the code and the coordinates of each silver block it can see from its initial position. In the fatality case the Robot does NOT see any silver token it revolves itself and search again till it finds an unpicked silver token.
 Obtained the list of pickable silver token, the Robot sort them with respect to the distance and save the coordinates of the closest one. 
