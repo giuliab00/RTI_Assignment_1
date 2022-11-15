@@ -35,7 +35,7 @@ def find_gold():
 
 def update(list_token):
         sort the list of tokens given with respect to their distance
-		c is the code of the first token in the sorted list
+	c is the code of the first token in the sorted list
         d is the distance of the first token in the sorted list
         r is the angle of the first token in the sorted list
         return these values
