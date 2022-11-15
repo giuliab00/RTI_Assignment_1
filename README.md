@@ -17,7 +17,7 @@ Then the Robot goes to reach it following and updating the coordinates of the cl
 This process ends when all the blocke are paired, so when there are no more pickable silver token.
 
 ## Pseudocode
-Here is possible to see the function I have implemented to reach the goal, followed by the main procedure executed by the Robot
+Here is possible to see the function I have implemented to reach the goal 
 ```
 def find_silver():
 	for each markers the robot sees
@@ -65,7 +65,9 @@ def gold_action(code,distance,angle):
 	if distance less than the distance threshold + the lenght of the token grabbed:
 		release the token
 		add code of the token to the list of taken token
-	
+```
+Followed by the main procedure executed by the Robot
+```
 Initialize an empty list of silver taken token
 Initialize an empty list of gold taken token
 
