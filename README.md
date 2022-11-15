@@ -48,8 +48,8 @@ def reach_closest_token(angle,distance):
 			turn right
 		elif angle is less than -angle threshold:
 			turn turn left  
-    else:
-    	if angle is included between -angle threshold and +angle threshold:
+    	else:
+    		if angle is included between -angle threshold and +angle threshold:
 			print "Here we are"
 		elif angle is greater than +angle threshold:
 			turn right
