@@ -1,6 +1,6 @@
 Assignment 1 of Research Track I
 ================================
-The subscribed solution of the first Research Track's assignment wants to be a general efficient solution.
+The subscribed solution of the first Research Track's assignment wants to be a generally efficient solution.
 The idea is to search and choose the closest silver box in the enviroment, then placing that block adiacent to the closest golden box, getting at the end the boxes distributed in pairs.
 
 How to run the solution
