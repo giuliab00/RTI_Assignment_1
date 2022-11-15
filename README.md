@@ -89,4 +89,4 @@ while number of taken token is less than the number of token to pick:
 Possible Improvement
 ----------------------
 One of the possible improvement would regard the possibility of an empass due to the fact that the closest pickable silver token is behind a gold token. In this specific case the Robot would try to grab the silver token endlessly. In this configuration the situation doesn't appear, but it would be fixable with another function called after the update() which check if there are any obstacle in between the robot and its goal. 
-Generally the code coulb be improved making the structure lighter at a computational level, but this doesn't affect the correct esecution of the Robot procedure.
+Generally the code could be improved making the structure lighter at a computational level, but this doesn't affect the correct esecution of the Robot procedure.
