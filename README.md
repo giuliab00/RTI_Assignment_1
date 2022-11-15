@@ -12,7 +12,7 @@ $ python2 run.py assignment.py
 How works
 ----------------------
 From its initial position the Robot start searching the closest silver token, it measures and saves the code and the coordinates of each silver block it can see from its initial position. In the fatality case the Robot does NOT see any silver token it revolves itself and search again till it finds an unpicked silver token.
-Obtained the the list of pickable silver token, the Robot sort them with respect to the distance an save the coordinates of the closest one. 
+Obtained the list of pickable silver token, the Robot sort them with respect to the distance and save the coordinates of the closest one. 
 Then the Robot goes to reach it following and updating the coordinates of the closest silver token. When the Robot reaches it, it grabs it and then start searching as it did at he start a gold token to pair them.
 This process ends when all the blocke are paired, so when there are no more pickable silver token.
 
