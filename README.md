@@ -18,7 +18,7 @@ This process ends when all the blocke are paired, so when there are no more pick
 
 ## Pseudocode
 Here is possible to see the functions I have implemented to reach the goal 
-```
+```python
 def find_silver():
 	for each markers the robot sees
 	    if color of the marker is silver and I haven't picked the token yet:
@@ -67,7 +67,7 @@ def gold_action(code,distance,angle):
 		add code of the token to the list of taken token
 ```
 And the main procedure executed by the Robot, which use the functions above, is implemented as follows
-```
+```python
 Initialize an empty list of silver taken token
 Initialize an empty list of gold taken token
 
